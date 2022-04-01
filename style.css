@@ -1,0 +1,75 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+h1{
+    text-align: center;
+    margin:40px auto;
+}
+p{
+    text-align: center;
+    max-width:700px;
+    margin:0 auto;
+}
+
+h1::before{
+    content:'Good evening';
+    background:linear-gradient(45deg,red,blue,green);
+    border-bottom:1px solid #ededed;
+    color:#dddd;
+}
+
+h1::after{
+    content:'end of good evening';
+    background:linear-gradient(45deg ,blue,red);
+    border-radius:6px;
+    color:#ddd;
+
+}
+
+
+.items{
+    display:flex;
+    justify-content: center; /* horizontally center */
+    align-items: center;  /* vertically center */
+    margin:80px auto;
+    /* position: relative; */
+
+}
+
+
+
+li{
+    list-style:none;
+    padding:.8rem;
+    padding:.5rem .5rem .5rem  2rem;
+    position: relative;
+    background:rgb(0 0 0 /.1);
+    margin:5px;
+    font-family:sans-serif;
+}
+
+li.done{
+    background:rgb(100,200,300);
+}
+
+li.done::before{
+    content:'';
+    position: absolute;
+    border-color:#039935;
+    border-style:solid;
+    border-width:0 0.3em 0.25em 0; /* top-0 right-0.3em  bottom-0.25em left-0*/
+    height:1.2rem;
+    top:1.2rem;
+    left:.6rem;
+    /* right:.4rem; */
+    margin-top:-1rem;
+    width:.3rem;
+    transform:rotate(45deg);
+    /* top:1.2rem; */
+    
+
+}
+
